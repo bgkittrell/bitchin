@@ -10,12 +10,12 @@ This is a [bit field](http://en.wikipedia.org/wiki/Bit_field) that uses a single
 
 By default Bitchin looks for an Integer column in your model called 'bit_flag'. This is all it takes to get working.
 
-    model User << ActiveRecord::Base
+    model User < ActiveRecord::Base
       bitchin :active, :banned, :stupid
 
 Otherwise you can specify the column name yourself.
 
-    model User << ActiveRecord::Base
+    model User < ActiveRecord::Base
       bitchin({:column => :settings_flag }, :active, :banned, :stupid)
 
 Accessors are automatically added to your model.
@@ -37,12 +37,12 @@ ActiveRecords provides built-in hash serialization for text columns, but you don
 
 By default Hashed looks for an Text column in your model called 'hash_field'. This is all it takes to get working.
 
-    model User << ActiveRecord::Base
+    model User < ActiveRecord::Base
       hashed :twitter_username, :github_username 
 
 Otherwise you can specify the column name yourself.
 
-    model User << ActiveRecord::Base
+    model User < ActiveRecord::Base
       hashed({:column => :settings_hash }, :twitter_username, :github_username)
 
 Accessors are automatically added to your model.
