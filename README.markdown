@@ -4,25 +4,25 @@ Bitchin is a very simple Rails plugin that makes it super easy to add properties
 
 ## Bitchin (Boolean Values)
 
-This is a [bit field](http://en.wikipedia.org/wiki/Bit_field) that uses a single Integer column but allows you to store multiple Boolean values.  Because the only value stored is an Integer and deserialization is only a binary operation it's very fast.
+This is a [bit field](http://en.wikipedia.org/wiki/Bit_field) that uses a single Integer column but allows you to store multiple Boolean values.  Because the only value stored is an Integer and deserialization is only a binary operation, it's very fast.
 
 ### Usage
 
 By default Bitchin looks for an Integer column in your model called 'bit_flag'. This is all it takes to get working.
 
-`model User << ActiveRecord::Base
-   bitchin :active, :banned, :stupid`
+    model User << ActiveRecord::Base
+      bitchin :active, :banned, :stupid
 
 Otherwise you can specify the column name yourself.
 
-`model User << ActiveRecord::Base
-   bitchin({:column => :settings_flag }, :active, :banned, :stupid)`
+    model User << ActiveRecord::Base
+      bitchin({:column => :settings_flag }, :active, :banned, :stupid)
 
 Accessors are automatically added to your model.
 
-`user.stupid = true
-user.stupid? #=> true
-user.stupid #=> true`
+    user.stupid = true
+    user.stupid? #=> true
+    user.stupid #=> true
 
 ### Important Notes
 
@@ -37,18 +37,18 @@ ActiveRecords provides built-in hash serialization for text columns, but you don
 
 By default Hashed looks for an Text column in your model called 'hash_field'. This is all it takes to get working.
 
-`model User << ActiveRecord::Base
-   hash_field :twitter_username, :github_username`
+    model User << ActiveRecord::Base
+      hash_field :twitter_username, :github_username 
 
 Otherwise you can specify the column name yourself.
 
-`model User << ActiveRecord::Base
-   bitchin({:column => :settings_hash }, :twitter_username, github_username`
+    model User << ActiveRecord::Base
+     bitchin({:column => :settings_hash }, :twitter_username, github_username
 
 Accessors are automatically added to your model.
 
-`user.twitter_username = "bgkittrell"
-user.twitter_username #=> "bgkittrell"`
+    user.twitter_username = "bgkittrell"
+    user.twitter_username #=> "bgkittrell"
 
 ### Important Notes
 
