@@ -2,10 +2,6 @@
 
 Bitchin is a very simple Rails plugin that makes it super easy to add properties to your ActiveRecord Models without those pesky table columns. There are two components...
 
-## Installation
-
-`./script/plugin install git://github.com/bgkittrell/bitchin.git`
-
 ## Bitchin (Boolean Values)
 
 This is a [bit field](http://en.wikipedia.org/wiki/Bit_field) that uses a single Integer column but allows you to store multiple Boolean values.  Because the only value stored is an Integer and deserialization is only a binary operation it's very fast.
@@ -57,6 +53,10 @@ user.twitter_username #=> "bgkittrell"`
 ### Important Notes
 
 1.  Hashed should **NOT** be used for fields that need to be queried with SQL.  The value stored in the DB will be a stored as YAML.
+
+## Installation
+
+`./script/plugin install git://github.com/bgkittrell/bitchin.git`
 
 # License
 
