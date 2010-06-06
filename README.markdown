@@ -43,7 +43,7 @@ By default Hashed looks for an Text column in your model called 'hash_field'. Th
 Otherwise you can specify the column name yourself.
 
     model User << ActiveRecord::Base
-      hashed({:column => :settings_hash }, :twitter_username, github_username
+      hashed({:column => :settings_hash }, :twitter_username, :github_username)
 
 Accessors are automatically added to your model.
 
