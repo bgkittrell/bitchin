@@ -60,5 +60,5 @@ Accessors are automatically added to your model.
 
 # License
 
-This plugin is under the Do Whatever The Fuck You Want With It License (DWTFYWWIL)
+This plugin is under the Do Whatever The Fuck You Want With It License (WTFYW)
 
