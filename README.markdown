@@ -27,7 +27,7 @@ Accessors are automatically added to your model.
 ### Important Notes
 
 1.  Bitchin should **NOT** be used for fields that need to be queried with SQL.  The value stored in the DB will be a single Integer, not seperate values. 
-2.  Fields can **NOT** be re-ordered or moved. Bit flags rely on an internal counter for deserialization. You can however add fields at any time.  
+2.  Fields can **NOT** be re-ordered or removed. Bit flags rely on an internal counter for deserialization. You can however add fields at any time.  
 
 ## Hashed (Scalar Values)
 
@@ -38,12 +38,12 @@ ActiveRecords provides built-in hash serialization for text columns, but you don
 By default Hashed looks for an Text column in your model called 'hash_field'. This is all it takes to get working.
 
     model User << ActiveRecord::Base
-      hash_field :twitter_username, :github_username 
+      hashed :twitter_username, :github_username 
 
 Otherwise you can specify the column name yourself.
 
     model User << ActiveRecord::Base
-     bitchin({:column => :settings_hash }, :twitter_username, github_username
+      hashed({:column => :settings_hash }, :twitter_username, github_username
 
 Accessors are automatically added to your model.
 
