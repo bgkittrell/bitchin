@@ -22,3 +22,4 @@ module Hashed
     end
   end
 end
+ActiveRecord::Base.send(:extend, Hashed)
