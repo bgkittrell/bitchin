@@ -1,3 +1,5 @@
+require 'hashed' 
+
 module Bitchin
   def bitchin(*flags)
     column = "bit_flag"
